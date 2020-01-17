@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+<title>A Blank Slate</title>
+<link rel="icon" href="favicon.png" type="image/png">
+</head>
+<style>
+@font-face {
+  font-family: Hashtag;
+  src: url(s1.ttf);
+  font-family:Bitstream Vera Sans;
+  src: url(Vera.ttf);
+}
+.start { background-color: #b59; color: white; float: left; 
+border: 7px solid #88D4F2; border-radius: 25px; outline: none; cursor: pointer; padding: 14px 16px; 
+font-family:Hashtag; font-size: 25px; width: 25%; position: relative; top: 325px; left: 0px;}
+
+.start:hover { background-color: #d7b; }
+
+.startHidden { background-color: #b59; color: white; float: left; 
+border: 7px solid #88D4F2; border-radius: 25px; outline: none; cursor: pointer; padding: 14px 16px; 
+font-family:Hashtag; font-size: 25px; width: 25%; position: relative; top: 1000px; left: 0px;}
+
+body {
+	width: 100%;
+	min-height: 100%;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#bg {
+position: fixed; 
+  top: 0; 
+  left: 0; 
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+#txt {
+background-image: url('textbg.png');
+z-index: 1;
+position: relative; top: 350px; left: 350px;
+font-size: 20px; width: 50%;
+border: 5px solid #FFFFFF; border-radius: 10px;
+font-family:Vera;
+font-weight: bold;
+color: white;
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+padding: 15px;
+}
+
+</style>
+<body id="body">
+<img src="startscrn.png" id="bg">
+<audio controls style="visibility:hidden" id="intro">
+<source src="1.ogg" type="audio/ogg">
+</audio>
+
+<audio controls style="visibility:hidden" id="home">
+<source src="2.ogg" type="audio/ogg">
+</audio>
+
+<audio controls loop style="visibility:hidden" id="static">
+<source src="interference.ogg" type="audio/ogg">
+</audio>
+
+<audio controls style="visibility:hidden" id="ping">
+<source src="hover.ogg" type="audio/ogg">
+</audio>
+
+<audio controls style="visibility:hidden" id="select">
+<source src="select.ogg" type="audio/ogg">
+</audio>
+
+<script src="intropage.js"></script>
+<script src="script.js"></script>
+<button id="start" class="start" onclick="play()" onmouseover="ping()" onkeypress="myFunction()" type="button">Start</button>
+<p id="txt"  class="txt">It's a cold dark void full of death that I feel in this dream. Why am I here?<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</p>
+</body>
+</html>
